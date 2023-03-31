@@ -38,14 +38,14 @@ def test_find_suitable_user():
 
     suiable_user = None
     for user in users:
-        if user["name"] == "Olga":
+        if user['name'] == "Olga":
             suiable_user = user
     assert suiable_user == {"name": "Olga", "age": 45}
 
     suiable_users = None
     for user in users:
-        if user["age"] > 20:
-            suiable_user = user
+        if user['age'] < 20:
+            suiable_users = [user for user in users if user['age'] < 20]
     assert suiable_users == [
         {"name": "Stanislav", "age": 15},
         {"name": "Maria", "age": 18},
