@@ -1,13 +1,10 @@
 from datetime import time
 
 def test_dark_theme():
-    """
-    Протестируйте правильность переключения темной темы на сайте
-    """
 
     current_time = time(hour=23)
     is_dark_theme = None
-    if 22 <= current_time.hour <= 6:
+    if time(22) <= current_time or current_time <= time(6):
         is_dark_theme = True
     else:
         is_dark_theme = False
@@ -16,7 +13,7 @@ def test_dark_theme():
     current_time = time(hour=16)
     dark_theme_enabled = True
     is_dark_theme = None
-    if 22 <= current_time.hour <= 6:
+    if time(22) <= current_time or current_time <= time(6):
         is_dark_theme = True
     elif dark_theme_enabled == True:
         is_dark_theme = True
@@ -62,7 +59,6 @@ def test_find_suitable_user():
 # >>> open_browser(browser_name="Chrome")
 # "Open Browser [Chrome]"
 
-def
 
 def test_readable_function():
     open_browser(browser_name="Chrome")
