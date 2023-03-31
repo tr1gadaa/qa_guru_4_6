@@ -35,13 +35,14 @@ def test_find_suitable_user():
         {"name": "Olga", "age": 45},
         {"name": "Maria", "age": 18},
     ]
-
+# ищем пользователя с именем Ольга
     suiable_user = None
     for user in users:
         if user['name'] == "Olga":
             suiable_user = user
     assert suiable_user == {"name": "Olga", "age": 45}
 
+# ищем всех пользователей младше 20 лет
     suiable_users = None
     for user in users:
         if user['age'] < 20:
@@ -60,6 +61,8 @@ def test_find_suitable_user():
 # сделать буквы заглавными (или первую букву), затем вывести значения всех аргументов этой функции:
 # >>> open_browser(browser_name="Chrome")
 # "Open Browser [Chrome]"
+
+def
 
 def test_readable_function():
     open_browser(browser_name="Chrome")
