@@ -60,6 +60,7 @@ def test_find_suitable_user():
 # "Open Browser [Chrome]"
 
 def make_readble_function(func_name, *args):
+    print(f"{func_name.__name__.replace('_', ' ').title()} [{', '.join(args)}]")
     return f"{func_name.__name__.replace('_', ' ').title()} [{', '.join(args)}]"
 
 def test_readable_function():
